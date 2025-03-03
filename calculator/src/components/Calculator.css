@@ -1,46 +1,114 @@
+/* Calculator Container */
 .calculator {
-    width: 300px;
+    width: 350px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     background: #222;
     color: white;
     text-align: center;
 }
 
+/* Display Section */
 .display {
-    padding: 10px;
+    padding: 15px;
     font-size: 2rem;
     text-align: right;
+    background: #111;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
-.result{
+.result {
     font-size: 1.5rem;
     color: #0f0;
 }
 
+/* Buttons Grid */
 .buttons {
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
-button {
+/* Button Styling */
+.button {
     padding: 15px;
     font-size: 1.5rem;
     border: none;
-    background:#333;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-    transition: background 0.2s;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
-button:hover {
+/* Button Effects */
+.button:hover {
     background: #555;
 }
 
-button:active{
-    background:#777;
+.button:active {
+    transform: scale(0.9);
+}
+
+/* History Panel */
+.history-panel {
+    margin-top: 20px;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.history-panel h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.history-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history-panel li {
+    padding: 5px;
+    font-size: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+/* Toggle History Button */
+.toggle-history {
+    margin-top: 10px;
+    background: #8494c3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toggle-history:hover {
+    background: #0056b3;
+}
+
+/* Clear History Button */
+.clear-history {
+    background: red;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.clear-history:hover {
+    background: darkred;
 }
